@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Google</title>
+
+    <!-- update the version number as needed -->
+    <script defer src="/__/firebase/8.8.0/firebase-app.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <script defer src="/__/firebase/8.8.0/firebase-database.js"></script>
+    <!-- 
+      initialize the SDK after all desired features are loaded, set useEmulator to false
+      to avoid connecting the SDK to running emulators.
+    -->
+    <script defer src="/__/firebase/init.js?useEmulator=true"></script>
+  </head>
+  <body>
+
+    <!-- Header -->
+
+    <header class="header" id="header">
+        <nav class="nav">
+            <div class="nav__center container">
+                <div class="logo">
+                  <img id = "logo" src = "https://cdn.freebiesupply.com/images/large/2x/google-logo-transparent.png"
+                       <h2>  </h2>
+                </div>
+
+                <div class="nav__menu">
+                    <ul class="nav__list">
+                        <li class="nav__item">
+                            <a href="#header" class="nav__link scroll-link">Home</a>
+                        </li>
+
+                        <li class="nav__item">
+                            <a href="#new" class="nav__link scroll-link">New</a>
+                        </li>
+
+                        <li class="nav__item">
+                            <a href="#all" class="nav__link scroll-link">Shop</a>
+                        </li>
+
+                       
+
+                        <li class="nav__item">
+                            <a href="#contact" class="nav__link scroll-link">Contact</a>
+                        </li>
+
+                        <li class="nav__close flex__center">
+                            <svg>
+                                <use xlink:href="./images/sprite.svg#icon-cross"></use>
+                            </svg>
+                        </li>
+                      <li class="nav__item">
+                            <a href="cart.html" class="nav__link scroll-link"> Cart</a>
+                        </li>
+                    </ul>
+
+                    <div class="cart flex__center">
+                        <span>
+                            <svg>
+                                <use xlink:href="./images/sprite.svg#icon-cart-plus"></use>
+                            </svg>
+                        </span>
+                    </div>
+
+                    <div class="hamburger flex__center">
+                        <svg>
+                            <use xlink:href="./images/sprite.svg#icon-menu"></use>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <div class="hero">
+            <div class="hero__center container">
+                <div class="hero__left">
+                    <h1>Google Merch</h1>
+                    <p>
+                        Don't be evil, but some merch!
+                    </p>
+                    <a href="#" class="button hero__btn">Shop Now</a>
+                </div>
+
+                <div class="hero__right">
+
+                </div>
+            </div>
+
+            <a href="#" class="go-down flex__center">
+                <svg>
+                    <use xlink:href="./images/sprite.svg#icon-angle-down"></use>
+                </svg>
+            </a>
+        </div>
+    </header>
+
+    <!-- New Products -->
+
+    <main>
+        <section class="section new" id="new">
+            <div class="new__center container container1">
+                <div class="title">
+                    <h1>New Products</h1>
+                </div>
+
+                <div class="product__center">
+                    <div class="product">
+                        <div class="product__header">
+                            <img src="https://shop.googlemerchandisestore.com/store/20160512512/assets/items/images/GGOEGAKC171799.webp" alt="">
+                            
+                          <span class="flex__center">
+                                <svg>
+                                    <use xlink:href="./images/sprite.svg#icon-camera"></use>
+                                </svg>
+                            </span>
+                        </div>
+                        <div class="product__footer">
+                            <h2 class = "title">Socks </h2>
+                            <a href="#cart" class="button hero__btn" onclick = "cartClicked()">Add to cart</a>
+
+                            <h4 class="price">$18</h4> 
+                        </div>
+                    </div>
+                  <div class="product">
+                        <div class="product__header">
+                            <img src="https://shop.googlemerchandisestore.com/store/20160512512/assets/items/images/GGOEGAKC171799.webp" alt="">
+                            
+                          <span class="flex__center">
+                                <svg>
+                                    <use xlink:href="./images/sprite.svg#icon-camera"></use>
+                                </svg>
+                            </span>
+                        </div>
+                        <div class="product__footer">
+                            <h2 class = "title">Socks </h2>
+                            <a href="#cart" class="button hero__btn" onclick = "cartClicked()">Add to cart</a>
+
+                            <h4 class="price">$18</h4> 
+                        </div>
+                    </div>
+                  <div class="product">
+                        <div class="product__header">
+                            <img src="https://shop.googlemerchandisestore.com/store/20160512512/assets/items/images/GGOEGAKC171799.webp" alt="">
+                            
+                          <span class="flex__center">
+                                <svg>
+                                    <use xlink:href="./images/sprite.svg#icon-camera"></use>
+                                </svg>
+                            </span>
+                        </div>
+                        <div class="product__footer">
+                            <h2 class = "title">Socks </h2>
+                            <a href="#cart" class="button hero__btn" onclick = "cartClicked()">Add to cart</a>
+
+                            <h4 class="price">$18</h4> 
+                        </div>
+                    </div>
+                  <div class="product">
+                        <div class="product__header">
+                            <img src="https://shop.googlemerchandisestore.com/store/20160512512/assets/items/images/GGOEGAKC171799.webp" alt="">
+                            
+                          <span class="flex__center">
+                                <svg>
+                                    <use xlink:href="./images/sprite.svg#icon-camera"></use>
+                                </svg>
+                            </span>
+                        </div>
+                        <div class="product__footer">
+                            <h2 class = "title">Socks </h2>
+                            <a href="#cart" class="button hero__btn" onclick = "cartClicked()">Add to cart</a>
+
+                            <h4 class="price">$18</h4> 
+                        </div>
+                    </div>
+              </div>
+          </div>
+      </section>
+
+        <!-- Category -->
+        <section class="section category">
+            <div class="category__center container">
+                <div class="category__left">
+                    <div class="content">
+                        <h2>Google Swag</h2>
+                        <h1>Brand New</h1>
+                        <a href="#" class="button category__btn" >Shop Now</a>
+                    </div>
+                    <img src="./images/cat2.png" alt="">
+                </div>
+
+                <div class="category__right">
+                    <div class="content">
+                        <h2>Big Save</h2>
+                        <h1>Save 50%</h1>
+                        <a href="#" class="button category__btn">Shop Now</a>
+                    </div>
+                    <img src="./images/cat1.png" alt="">
+                </div>
+            </div>
+        </section>
+
+
+        <section class="section all__products" id="all">
+            <div class="all__center container">
+                <div class="title">
+                    <h1>All Products</h1>
+                </div>
+
+                <div class="product__center">
+                   <div class="product">
+                        <div class="product__header">
+                            <img src="https://shop.googlemerchandisestore.com/store/20160512512/assets/items/images/GGOEGAKC171799.webp" alt="">
+                            
+                          <span class="flex__center">
+                                <svg>
+                                    <use xlink:href="./images/sprite.svg#icon-camera"></use>
+                                </svg>
+                            </span>
+                        </div>
+                        <div class="product__footer">
+                            <h2 class = "title">Socks </h2>
+                            <a href="#cart" class="button hero__btn">Add to cart</a>
+
+                            <h4 class="price">$18</h4> 
+                        </div>
+                    </div>
+                  
+                   <div class="product">
+                        <div class="product__header">
+                            <img src="https://shop.googlemerchandisestore.com/store/20160512512/assets/items/images/GGOEGAKC171799.webp" alt="">
+                            
+                          <span class="flex__center">
+                                <svg>
+                                    <use xlink:href="./images/sprite.svg#icon-camera"></use>
+                                </svg>
+                            </span>
+                        </div>
+                        <div class="product__footer">
+                            <h2 class = "title">Socks </h2>
+                            <a href="#cart" class="button hero__btn">Add to cart</a>
+
+                            <h4 class="price">$18</h4> 
+                        </div>
+                    </div>
+                  
+                   <div class="product">
+                        <div class="product__header">
+                            <img src="https://shop.googlemerchandisestore.com/store/20160512512/assets/items/images/GGOEGAKC171799.webp" alt="">
+                            
+                          <span class="flex__center">
+                                <svg>
+                                    <use xlink:href="./images/sprite.svg#icon-camera"></use>
+                                </svg>
+                            </span>
+                        </div>
+                        <div class="product__footer">
+                            <h2 class = "title">Socks </h2>
+                            <a href="#cart" class="button hero__btn">Add to cart</a>
+
+                            <h4 class="price">$18</h4> 
+                        </div>
+                    </div>
+                  
+                   <div class="product">
+                        <div class="product__header">
+                            <img src="https://shop.googlemerchandisestore.com/store/20160512512/assets/items/images/GGOEGAKC171799.webp" alt="">
+                            
+                          <span class="flex__center">
+                                <svg>
+                                    <use xlink:href="./images/sprite.svg#icon-camera"></use>
+                                </svg>
+                            </span>
+                        </div>
+                        <div class="product__footer">
+                            <h2 class = "title">Socks </h2>
+                            <a href="#cart" class="button hero__btn">Add to cart</a>
+
+                            <h4 class="price">$18</h4> 
+                        </div>
+                    </div>
+                  
+                   <div class="product">
+                        <div class="product__header">
+                            <img src="https://shop.googlemerchandisestore.com/store/20160512512/assets/items/images/GGOEGAKC171799.webp" alt="">
+                            
+                          <span class="flex__center">
+                                <svg>
+                                    <use xlink:href="./images/sprite.svg#icon-camera"></use>
+                                </svg>
+                            </span>
+                        </div>
+                        <div class="product__footer">
+                            <h2 class = "title">Socks </h2>
+                            <a href="#cart" class="button hero__btn">Add to cart</a>
+
+                            <h4 class="price">$18</h4> 
+                        </div>
+                    </div>
+                  
+                   <div class="product">
+                        <div class="product__header">
+                            <img src="https://shop.googlemerchandisestore.com/store/20160512512/assets/items/images/GGOEGAKC171799.webp" alt="">
+                            
+                          <span class="flex__center">
+                                <svg>
+                                    <use xlink:href="./images/sprite.svg#icon-camera"></use>
+                                </svg>
+                            </span>
+                        </div>
+                        <div class="product__footer">
+                            <h2 class = "title">Socks </h2>
+                            <a href="#cart" class="button hero__btn">Add to cart</a>
+
+                            <h4 class="price">$18</h4> 
+                        </div>
+                    </div>
+                  
+                   <div class="product">
+                        <div class="product__header">
+                            <img src="https://shop.googlemerchandisestore.com/store/20160512512/assets/items/images/GGOEGAKC171799.webp" alt="">
+                            
+                          <span class="flex__center">
+                                <svg>
+                                    <use xlink:href="./images/sprite.svg#icon-camera"></use>
+                                </svg>
+                            </span>
+                        </div>
+                        <div class="product__footer">
+                            <h2 class = "title">Socks </h2>
+                            <a href="#cart" class="button hero__btn">Add to cart</a>
+
+                            <h4 class="price">$18</h4> 
+                        </div>
+                    </div>
+                  
+                   <div class="product">
+                        <div class="product__header">
+                            <img src="https://shop.googlemerchandisestore.com/store/20160512512/assets/items/images/GGOEGAKC171799.webp" alt="">
+                            
+                          <span class="flex__center">
+                                <svg>
+                                    <use xlink:href="./images/sprite.svg#icon-camera"></use>
+                                </svg>
+                            </span>
+                        </div>
+                        <div class="product__footer">
+                            <h2 class = "title">Socks </h2>
+                            <a href="#cart" class="button hero__btn">Add to cart</a>
+
+                            <h4 class="price">$18</h4> 
+                        </div>
+                    </div>
+                  
+                  
+              </div>
+          </div>
+        </section>
+
+       
+
+        <section class="contact container" id="contact">
+            <div class="contact__left">
+                <h1>Subscribe for more information about drops!</h1>
+                <p>Remember don't be evil.</p>
+            </div>
+            <div class="contact__right">
+                <form action="#">
+                    <input type="email" placeholder="Enter email address">
+                    <a href="#" class="button">Subscribe</a>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer id="footer" class="section footer">
+        <div class="container">
+            <div class="footer__top">
+                <div class="footer-top__box">
+                    <h3>EXTRAS</h3>
+                    <a href="#">Brands</a>
+                    <a href="#">Gift Certificates</a>
+                    <a href="#">Affiliate</a>
+                    
+                </div>
+                <div class="footer-top__box">
+                    <h3>INFORMATION</h3>
+                    <a href="#">About Us</a>
+                  
+                    <a href="#">Terms & Conditions</a>
+                    <a href="#">Contact Us</a>
+                    
+                </div>
+                <div class="footer-top__box">
+                    <h3>MY ACCOUNT</h3>
+                    <a href="#">My Account</a>
+                    <a href="#">Order History</a>
+                    
+                    
+                 <a href="#">Returns</a>
+                </div>
+                <div class="footer-top__box">
+                    <h3>CONTACT US</h3>
+                    <div>
+                        <span>
+                            <svg>
+                                <use xlink:href="./images/sprite.svg#icon-location"></use>
+                            </svg>
+                        </span>
+                        Google, USA
+                    </div>
+                    <div>
+                        <span>
+                            <svg>
+                                <use xlink:href="./images/sprite.svg#icon-envelop"></use>
+                            </svg>
+                        </span>
+                        google@gmail.com
+                    </div>
+                    <div>
+                        <span>
+                            <svg>
+                                <use xlink:href="./images/sprite.svg#icon-phone"></use>
+                            </svg>
+                        </span>
+                        call google
+                    </div>
+                    <div>
+                        <span>
+                            <svg>
+                                <use xlink:href="./images/sprite.svg#icon-paperplane"></use>
+                            </svg>
+                        </span>
+                        GOOGLE, USA
+                    </div>
+                </div>
+            </div>
+        </div>
+       
+    </footer>
+
+
+    <script src="script.js"></script>
+  </body>
+</html>
